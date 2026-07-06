@@ -1,0 +1,156 @@
+:root {
+  color-scheme: light;
+  --bg: #f8fbff;
+  --bg-soft: #edf5f7;
+  --bg-elevated: rgba(255, 255, 255, 0.78);
+  --text: #16202a;
+  --muted: #5c6875;
+  --line: rgba(56, 72, 87, 0.14);
+  --brand: #5a5cf0;
+  --brand-strong: #3538c9;
+  --brand-cyan: #00a9c8;
+  --accent: #1f9d7a;
+  --warning: #b36b00;
+  --shadow: 0 24px 60px rgba(29, 38, 64, 0.14);
+  --radius: 8px;
+  --header-height: 72px;
+  --max-width: 1160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #10141d;
+    --bg-soft: #151c28;
+    --bg-elevated: rgba(23, 30, 43, 0.78);
+    --text: #edf4ff;
+    --muted: #a7b2c2;
+    --line: rgba(209, 223, 241, 0.16);
+    --brand: #9a9cff;
+    --brand-strong: #c2c4ff;
+    --brand-cyan: #55d9ef;
+    --accent: #55d1a8;
+    --warning: #ffc66b;
+    --shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #10141d;
+  --bg-soft: #151c28;
+  --bg-elevated: rgba(23, 30, 43, 0.78);
+  --text: #edf4ff;
+  --muted: #a7b2c2;
+  --line: rgba(209, 223, 241, 0.16);
+  --brand: #9a9cff;
+  --brand-strong: #c2c4ff;
+  --brand-cyan: #55d9ef;
+  --accent: #55d1a8;
+  --warning: #ffc66b;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(135deg, rgba(90, 92, 240, 0.08), transparent 28rem),
+    linear-gradient(225deg, rgba(0, 169, 200, 0.08), transparent 26rem),
+    var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+p {
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+  line-height: 1.16;
+}
+
+h1 {
+  font-size: 5.8rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.08rem;
+  margin-bottom: 0.55rem;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand-cyan) 72%, transparent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-140%);
+  border-radius: var(--radius);
+  background: var(--text);
+  color: var(--bg);
+  padding: 0.6rem 0.8rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

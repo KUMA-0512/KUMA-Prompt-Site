@@ -1,13 +1,216 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-page="home">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KUMA Prompt</title>
+  <meta name="description" content="KUMA Prompt 是你的 AIGC 图片与提示词管理工具，让灵感有迹可循。" />
+  <meta property="og:title" content="KUMA Prompt｜让灵感有迹可循" />
+  <meta property="og:description" content="收集灵感、整理提示词、管理图片，沉淀个人创作素材。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kumaprompt.com/" />
+  <meta property="og:image" content="https://kumaprompt.com/assets/logo/app-icon.png" />
+  <title>KUMA Prompt｜让灵感有迹可循</title>
+  <link rel="canonical" href="https://kumaprompt.com/" />
+  <link rel="icon" href="/assets/icons/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/icon-512.png" />
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/components.css" />
+  <link rel="stylesheet" href="/styles/pages.css" />
 </head>
 <body>
-  <h1>KUMA Prompt</h1>
-  <p>让灵感有迹可循。</p>
-  <p>你的专属 AIGC 图片与提示词管理工具。</p>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" data-site-header>
+    <div class="nav-shell">
+      <a class="brand-link" href="/" aria-label="KUMA Prompt 首页">
+        <img class="brand-mark" src="/assets/logo/app-icon.png" alt="" width="40" height="40" />
+        <span>KUMA Prompt</span>
+      </a>
+      <button class="icon-button menu-button" type="button" data-menu-toggle aria-label="打开导航" aria-expanded="false">
+        <span class="menu-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" data-site-nav aria-label="主导航">
+        <a href="/" data-nav="home">首页</a>
+        <a href="/#features" data-nav="features">产品</a>
+        <a href="/download/" data-nav="download">下载</a>
+        <a href="/support/" data-nav="support">帮助中心</a>
+        <a href="/privacy/" data-nav="privacy">隐私政策</a>
+        <a href="/terms/" data-nav="terms">用户协议</a>
+      </nav>
+      <button class="theme-button" type="button" data-theme-toggle aria-label="切换显示模式">
+        <span data-theme-label>系统</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero home-hero" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true">
+        <div class="phone-shell">
+          <div class="phone-status"></div>
+          <div class="mock-app-top">
+            <span>灵感</span>
+            <span>3</span>
+          </div>
+          <div class="mock-search"></div>
+          <div class="mock-card mock-card-primary">
+            <div class="mock-image"></div>
+            <div class="mock-lines">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="mock-grid">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-inner hero-inner">
+        <p class="eyebrow">AIGC 图片与提示词管理工具</p>
+        <h1 id="hero-title">KUMA Prompt</h1>
+        <p class="hero-slogan">让灵感有迹可循</p>
+        <p class="hero-copy">收集灵感、整理提示词、管理图片，把一次次创作沉淀成可回看、可复用的个人素材库。</p>
+        <div class="hero-actions" aria-label="主要操作">
+          <a class="button button-primary" href="/download/">下载 Android 版</a>
+          <a class="button button-secondary" href="/support/">查看帮助中心</a>
+          <span class="button button-disabled" aria-disabled="true">网页版即将上线</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-quiet" id="overview" aria-labelledby="overview-title">
+      <div class="section-inner section-heading">
+        <p class="eyebrow">产品介绍</p>
+        <h2 id="overview-title">从一闪而过的想法，到可持续复用的素材</h2>
+        <p>KUMA Prompt 面向 AIGC 图片创作者，帮助你把提示词、图片、分类、收藏和创作记录放在一个清晰的位置。</p>
+      </div>
+      <div class="section-inner value-grid">
+        <article class="feature-card">
+          <span class="card-kicker">01</span>
+          <h3>保存提示词</h3>
+          <p>为每条创作记录保存标题、标签、完整提示词和图片，后续可以继续编辑或删除。</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-kicker">02</span>
+          <h3>整理图片灵感</h3>
+          <p>用瀑布流回看图片卡片，也可以先保存无图草稿，之后再补充图片。</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-kicker">03</span>
+          <h3>沉淀个人素材</h3>
+          <p>通过分类、收藏、搜索和详情页复制，让常用提示词更容易被再次使用。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="section-inner split-section">
+        <div class="section-heading align-left">
+          <p class="eyebrow">核心能力</p>
+          <h2 id="features-title">围绕提示词库的日常工作流</h2>
+          <p>官网只展示当前能够从项目中确认的能力，下载包、反馈邮箱和正式法律文本会在发布前补充。</p>
+        </div>
+        <div class="feature-list">
+          <article class="line-item">
+            <div class="line-icon" aria-hidden="true">P</div>
+            <div>
+              <h3>提示词管理</h3>
+              <p>新建、编辑、删除提示词卡片，记录标题、标签和完整提示词正文。</p>
+            </div>
+          </article>
+          <article class="line-item">
+            <div class="line-icon" aria-hidden="true">I</div>
+            <div>
+              <h3>图片与分类</h3>
+              <p>上传图片、浏览卡片瀑布流，并用分类和收藏维护常用素材。</p>
+            </div>
+          </article>
+          <article class="line-item">
+            <div class="line-icon" aria-hidden="true">C</div>
+            <div>
+              <h3>快速复制</h3>
+              <p>在详情页复制完整提示词，方便粘贴到你选择的生成工具中继续创作。</p>
+            </div>
+          </article>
+          <article class="line-item">
+            <div class="line-icon" aria-hidden="true">T</div>
+            <div>
+              <h3>任务回看</h3>
+              <p>针对图片生成相关任务，保留待处理、已完成和失败状态的回看入口。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-quiet" id="scenes" aria-labelledby="scenes-title">
+      <div class="section-inner section-heading">
+        <p class="eyebrow">使用场景</p>
+        <h2 id="scenes-title">把创作过程里的零散动作收拢起来</h2>
+      </div>
+      <div class="section-inner scenario-grid">
+        <article class="scenario-card">
+          <h3>保存提示词</h3>
+          <p>把一次生成中效果不错的文本保存成卡片。</p>
+        </article>
+        <article class="scenario-card">
+          <h3>整理图片灵感</h3>
+          <p>为参考图或生成图保留上下文，减少回找成本。</p>
+        </article>
+        <article class="scenario-card">
+          <h3>建立分类</h3>
+          <p>按风格、主题或项目归档，后续检索更直接。</p>
+        </article>
+        <article class="scenario-card">
+          <h3>快速复制</h3>
+          <p>在详情页复制完整提示词，继续迁移到目标工具。</p>
+        </article>
+        <article class="scenario-card">
+          <h3>回看历史创作</h3>
+          <p>通过搜索、收藏和详情页回到具体创作记录。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cta-band" aria-labelledby="download-cta-title">
+      <div class="section-inner cta-inner">
+        <div>
+          <p class="eyebrow">Android 下载</p>
+          <h2 id="download-cta-title">安装包发布后将在下载页提供</h2>
+          <p>当前官网先保留版本、校验值和历史版本位置，避免写入未确认的 APK 地址。</p>
+        </div>
+        <a class="button button-primary" href="/download/">查看下载页</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-grid">
+      <div>
+        <a class="footer-brand" href="/">
+          <img src="/assets/logo/app-icon.png" alt="" width="32" height="32" />
+          <span>KUMA Prompt</span>
+        </a>
+        <p>让灵感有迹可循。</p>
+      </div>
+      <nav class="footer-links" aria-label="页脚导航">
+        <a href="/">首页</a>
+        <a href="/download/">下载</a>
+        <a href="/support/">帮助中心</a>
+        <a href="/privacy/">隐私政策</a>
+        <a href="/terms/">用户协议</a>
+      </nav>
+      <div class="footer-meta">
+        <p>联系方式：<span data-feedback-target>反馈邮箱暂未配置</span></p>
+        <p>Copyright <span data-current-year></span> KUMA Prompt.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/scripts/site-config.js"></script>
+  <script src="/scripts/theme.js"></script>
+  <script src="/scripts/main.js"></script>
 </body>
 </html>
