@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KUMA Prompt 是你的 AIGC 图片与提示词管理工具，让灵感有迹可循。" />
+  <meta name="description" content="KUMA Prompt 是本地优先的 AI 图片灵感与提示词工作台，覆盖词库、想法优化、模板派生、图生文、图生图、画廊与备份。" />
   <meta property="og:title" content="KUMA Prompt｜让灵感有迹可循" />
-  <meta property="og:description" content="收集灵感、整理提示词、管理图片，沉淀个人创作素材。" />
+  <meta property="og:description" content="收下灵感，继续推演、生成与整理，把每次创作沉淀成可复用的个人素材。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kumaprompt.com/" />
   <meta property="og:image" content="https://kumaprompt.com/assets/logo/app-icon.png" />
@@ -13,10 +13,10 @@
   <link rel="canonical" href="https://kumaprompt.com/" />
   <link rel="icon" href="/assets/icons/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/icons/icon-512.png" />
-  <link rel="stylesheet" href="/styles/base.css" />
-  <link rel="stylesheet" href="/styles/layout.css" />
-  <link rel="stylesheet" href="/styles/components.css" />
-  <link rel="stylesheet" href="/styles/pages.css" />
+  <link rel="stylesheet" href="/styles/base.css?v=20260714.1" />
+  <link rel="stylesheet" href="/styles/layout.css?v=20260714.1" />
+  <link rel="stylesheet" href="/styles/components.css?v=20260714.1" />
+  <link rel="stylesheet" href="/styles/pages.css?v=20260714.1" />
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -32,7 +32,7 @@
       </button>
       <nav class="site-nav" data-site-nav aria-label="主导航">
         <a href="/" data-nav="home">首页</a>
-        <a href="/#features" data-nav="features">产品</a>
+        <a href="/#features" data-nav="features">能力</a>
         <a href="/download/" data-nav="download">下载</a>
         <a href="/support/" data-nav="support">帮助中心</a>
         <a href="/privacy/" data-nav="privacy">隐私政策</a>
@@ -46,131 +46,144 @@
 
   <main id="main">
     <section class="hero home-hero" aria-labelledby="hero-title">
-      <div class="section-inner hero-inner hero-copy-panel">
-        <p class="eyebrow">AIGC 图片与提示词管理工具</p>
-        <h1 id="hero-title">KUMA Prompt</h1>
-        <p class="hero-slogan">让灵感有迹可循</p>
-        <p class="hero-copy">收集灵感、整理提示词、管理图片，把一次次创作沉淀成可回看、可复用的个人素材库。</p>
-        <div class="hero-actions" aria-label="主要操作">
-          <a class="button button-primary" href="/download/">下载 Android 版</a>
-          <a class="button button-secondary" href="/support/">查看帮助中心</a>
-          <span class="button button-disabled" aria-disabled="true">网页版即将上线</span>
-        </div>
-      </div>
-      <div class="hero-art hero-visual" aria-hidden="true">
-        <div class="phone-shell app-mockup">
-          <div class="phone-status"></div>
-          <div class="mock-app-top">
-            <span>灵感</span>
-            <span>3</span>
-          </div>
-          <div class="mock-search"></div>
-          <div class="mock-card mock-card-primary">
-            <div class="mock-image"></div>
-            <div class="mock-lines">
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <div class="mock-grid">
-            <div></div>
-            <div></div>
+      <div class="section-inner hero-shell">
+        <div class="hero-copy-panel">
+          <p class="eyebrow">本地优先的 AI 图片创作工作台</p>
+          <h1 id="hero-title">KUMA Prompt</h1>
+          <p class="hero-slogan">让灵感有迹可循</p>
+          <p class="hero-copy">从一条提示词、一个画面想法或一张参考图出发，继续优化、派生、生成与整理，把创作过程沉淀成可回看、可复用的个人资料库。</p>
+          <ul class="hero-facts" aria-label="产品特点">
+            <li>数据保存在本机</li>
+            <li>AI 服务自主配置</li>
+            <li>支持深浅色外观</li>
+          </ul>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="button button-primary" href="/download/">下载 Android 版</a>
+            <a class="button button-secondary" href="/support/">查看帮助中心</a>
+            <span class="button button-disabled" aria-disabled="true">网页版即将上线</span>
           </div>
         </div>
+        <figure class="hero-visual" aria-label="KUMA Prompt 词库、灵感和画廊界面预览">
+          <div class="product-stage">
+            <img class="product-screen product-screen-left" src="/assets/images/app/inspiration.jpg" alt="" width="390" height="822" decoding="async" />
+            <img class="product-screen product-screen-main" src="/assets/images/app/library.jpg" alt="" width="390" height="822" decoding="async" fetchpriority="high" />
+            <img class="product-screen product-screen-right" src="/assets/images/app/gallery.jpg" alt="" width="390" height="822" decoding="async" />
+          </div>
+        </figure>
       </div>
     </section>
 
-    <section class="section section-quiet" id="overview" aria-labelledby="overview-title">
+    <section class="section workflow-section" id="overview" aria-labelledby="overview-title">
       <div class="section-inner section-heading">
-        <p class="eyebrow">产品介绍</p>
-        <h2 id="overview-title">从一闪而过的想法，到可持续复用的素材</h2>
-        <p>KUMA Prompt 面向 AIGC 图片创作者，帮助你把提示词、图片、分类、收藏和创作记录放在一个清晰的位置。</p>
+        <p class="eyebrow">一条完整的创作链路</p>
+        <h2 id="overview-title">不止收藏提示词，也把灵感继续做完</h2>
+        <p>KUMA Prompt 将散落在相册、备忘录和不同生成工具里的创作线索，收拢为一套可以持续推进的个人工作流。</p>
       </div>
-      <div class="section-inner value-grid">
-        <article class="feature-card">
-          <span class="card-kicker">01</span>
-          <h3>保存提示词</h3>
-          <p>为每条创作记录保存标题、标签、完整提示词和图片，后续可以继续编辑或删除。</p>
+      <div class="section-inner workflow-grid">
+        <article class="workflow-step">
+          <span class="workflow-index">01</span>
+          <h3>收集</h3>
+          <p>保存提示词、图片和标签，先让值得留下的灵感有一个清楚的位置。</p>
         </article>
-        <article class="feature-card">
-          <span class="card-kicker">02</span>
-          <h3>整理图片灵感</h3>
-          <p>用瀑布流回看图片卡片，也可以先保存无图草稿，之后再补充图片。</p>
+        <article class="workflow-step">
+          <span class="workflow-index">02</span>
+          <h3>推演</h3>
+          <p>用想法优化、模板派生、角色锚点和知识库，把模糊方向逐步说明白。</p>
         </article>
-        <article class="feature-card">
-          <span class="card-kicker">03</span>
-          <h3>沉淀个人素材</h3>
-          <p>通过分类、收藏、搜索和详情页复制，让常用提示词更容易被再次使用。</p>
+        <article class="workflow-step">
+          <span class="workflow-index">03</span>
+          <h3>生成</h3>
+          <p>把提示词交给已配置的生图服务，或复制到你习惯的外部工具继续创作。</p>
         </article>
-      </div>
-    </section>
-
-    <section class="section" id="features" aria-labelledby="features-title">
-      <div class="section-inner split-section">
-        <div class="section-heading align-left">
-          <p class="eyebrow">核心能力</p>
-          <h2 id="features-title">围绕提示词库的日常工作流</h2>
-          <p>官网只展示当前能够从项目中确认的能力，下载包、反馈邮箱和正式法律文本会在发布前补充。</p>
-        </div>
-        <div class="feature-list">
-          <article class="line-item">
-            <div class="line-icon" aria-hidden="true">P</div>
-            <div>
-              <h3>提示词管理</h3>
-              <p>新建、编辑、删除提示词卡片，记录标题、标签和完整提示词正文。</p>
-            </div>
-          </article>
-          <article class="line-item">
-            <div class="line-icon" aria-hidden="true">I</div>
-            <div>
-              <h3>图片与分类</h3>
-              <p>上传图片、浏览卡片瀑布流，并用分类和收藏维护常用素材。</p>
-            </div>
-          </article>
-          <article class="line-item">
-            <div class="line-icon" aria-hidden="true">C</div>
-            <div>
-              <h3>快速复制</h3>
-              <p>在详情页复制完整提示词，方便粘贴到你选择的生成工具中继续创作。</p>
-            </div>
-          </article>
-          <article class="line-item">
-            <div class="line-icon" aria-hidden="true">T</div>
-            <div>
-              <h3>任务回看</h3>
-              <p>针对图片生成相关任务，保留待处理、已完成和失败状态的回看入口。</p>
-            </div>
-          </article>
-        </div>
+        <article class="workflow-step">
+          <span class="workflow-index">04</span>
+          <h3>回看</h3>
+          <p>在词库、画廊和任务中心找回原始、派生与图生图结果，继续复用。</p>
+        </article>
       </div>
     </section>
 
-    <section class="section section-quiet" id="scenes" aria-labelledby="scenes-title">
+    <section class="section section-quiet" id="features" aria-labelledby="features-title">
       <div class="section-inner section-heading">
-        <p class="eyebrow">使用场景</p>
-        <h2 id="scenes-title">把创作过程里的零散动作收拢起来</h2>
+        <p class="eyebrow">当前 App 能力</p>
+        <h2 id="features-title">四个主入口，覆盖从灵感到素材的日常</h2>
+        <p>以下内容来自当前 App 的真实界面与功能实现，不包含尚未发布的账号、云同步或在线网页版能力。</p>
       </div>
-      <div class="section-inner scenario-grid">
-        <article class="scenario-card">
-          <h3>保存提示词</h3>
-          <p>把一次生成中效果不错的文本保存成卡片。</p>
+      <div class="section-inner showcase-list">
+        <article class="showcase-row">
+          <figure class="app-screen-frame">
+            <img src="/assets/images/app/library.jpg" alt="KUMA Prompt 词库页面，使用瀑布流展示图片提示词卡片" width="390" height="822" loading="lazy" decoding="async" />
+          </figure>
+          <div class="showcase-copy">
+            <p class="feature-label">词库</p>
+            <h3>提示词、图片与上下文放在一起</h3>
+            <p>每张卡片可以保留标题、标签、提示词正文和图片。搜索、分类、收藏、编辑与版本记录，让过去的有效尝试更容易再次被找到。</p>
+            <ul class="feature-points">
+              <li>瀑布流浏览与关键词搜索</li>
+              <li>分类、收藏、草稿补图与回收站</li>
+              <li>模板提取、派生内容与版本回看</li>
+            </ul>
+          </div>
         </article>
-        <article class="scenario-card">
-          <h3>整理图片灵感</h3>
-          <p>为参考图或生成图保留上下文，减少回找成本。</p>
+
+        <article class="showcase-row showcase-row-reverse">
+          <figure class="app-screen-frame">
+            <img src="/assets/images/app/inspiration.jpg" alt="KUMA Prompt 灵感页面，包含任务中心、想法优化、角色锚点、图生文和知识库入口" width="390" height="822" loading="lazy" decoding="async" />
+          </figure>
+          <div class="showcase-copy">
+            <p class="feature-label">灵感</p>
+            <h3>从模糊想法，逐步整理成可执行画面</h3>
+            <p>输入一句画面想法，按核心维度与高级维度继续推演；也可以从参考图、已有模板或特定角色出发，减少每次从空白开始的成本。</p>
+            <ul class="feature-points">
+              <li>想法优化、随机灵感与灵感草稿</li>
+              <li>图生文、模板派生与角色锚点解析</li>
+              <li>画面风格、镜头语言与摄影构图知识库</li>
+            </ul>
+          </div>
         </article>
-        <article class="scenario-card">
-          <h3>建立分类</h3>
-          <p>按风格、主题或项目归档，后续检索更直接。</p>
+
+        <article class="showcase-row">
+          <figure class="app-screen-frame">
+            <img src="/assets/images/app/gallery.jpg" alt="KUMA Prompt 画廊页面，可筛选原始、派生和图生图图片" width="390" height="822" loading="lazy" decoding="async" />
+          </figure>
+          <div class="showcase-copy">
+            <p class="feature-label">画廊与任务</p>
+            <h3>生成结果不会脱离它的来路</h3>
+            <p>画廊按原始、派生和图生图结果整理图片；任务中心保留正在生成、待保存、失败与已放弃任务，方便继续处理，而不是只留下一个文件。</p>
+            <ul class="feature-points">
+              <li>原始、派生、图生图分组回看</li>
+              <li>后台生成任务状态与失败恢复</li>
+              <li>保存为新卡片、替换派生图或继续再创作</li>
+            </ul>
+          </div>
         </article>
-        <article class="scenario-card">
-          <h3>快速复制</h3>
-          <p>在详情页复制完整提示词，继续迁移到目标工具。</p>
-        </article>
-        <article class="scenario-card">
-          <h3>回看历史创作</h3>
-          <p>通过搜索、收藏和详情页回到具体创作记录。</p>
-        </article>
+      </div>
+    </section>
+
+    <section class="section trust-section" aria-labelledby="trust-title">
+      <div class="section-inner trust-layout">
+        <div class="trust-copy">
+          <p class="eyebrow">本地与可控</p>
+          <h2 id="trust-title">你的资料库，优先留在你的设备里</h2>
+          <p>KUMA Prompt 不要求账号登录。提示词、图片、模板和角色锚点优先保存在本机；文本、视觉和生图能力使用你在 App 中自行配置的服务。</p>
+          <dl class="trust-list">
+            <div>
+              <dt>ZIP 备份</dt>
+              <dd>支持导出、合并导入和清空后恢复。</dd>
+            </div>
+            <div>
+              <dt>隐藏内容</dt>
+              <dd>可使用 4 位 PIN 保护需要隐藏的内容。</dd>
+            </div>
+            <div>
+              <dt>外观偏好</dt>
+              <dd>支持深浅色模式和多种界面色调。</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="settings-visual">
+          <img src="/assets/images/app/settings.jpg" alt="KUMA Prompt 设置页面，包含 AI 与生成设置、资料库管理、数据与备份、外观与偏好" width="390" height="822" loading="lazy" decoding="async" />
+        </figure>
       </div>
     </section>
 
@@ -178,10 +191,10 @@
       <div class="section-inner cta-inner">
         <div>
           <p class="eyebrow">Android 下载</p>
-          <h2 id="download-cta-title">安装包发布后将在下载页提供</h2>
-          <p>当前官网先保留版本、校验值和历史版本位置，避免写入未确认的 APK 地址。</p>
+          <h2 id="download-cta-title">正式安装包确认后，从官网下载</h2>
+          <p>下载页已预留版本号、文件体积与 SHA-256 校验值；在信息确认前，不提供不明来源或占位 APK。</p>
         </div>
-        <a class="button button-primary" href="/download/">查看下载页</a>
+        <a class="button button-primary" href="/download/">查看下载状态</a>
       </div>
     </section>
   </main>
@@ -193,7 +206,7 @@
           <img src="/assets/logo/app-icon.png" alt="" width="32" height="32" />
           <span>KUMA Prompt</span>
         </a>
-        <p>让灵感有迹可循。</p>
+        <p>本地优先的 AI 图片创作工作台。</p>
       </div>
       <nav class="footer-links" aria-label="页脚导航">
         <a href="/">首页</a>
@@ -211,6 +224,6 @@
 
   <script src="/scripts/site-config.js"></script>
   <script src="/scripts/theme.js"></script>
-  <script src="/scripts/main.js"></script>
+  <script src="/scripts/main.js?v=20260714.1"></script>
 </body>
 </html>

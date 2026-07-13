@@ -19,14 +19,16 @@
     const nav = document.querySelector("[data-site-nav]");
     if (!toggle || !nav) return;
 
-    const closeMenu = () => {
-      document.body.classList.remove("nav-open");
-      toggle.setAttribute("aria-expanded", "false");
+    const setMenuState = (isOpen) => {
+      document.body.classList.toggle("nav-open", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "关闭导航" : "打开导航");
     };
 
+    const closeMenu = () => setMenuState(false);
+
     toggle.addEventListener("click", () => {
-      const isOpen = document.body.classList.toggle("nav-open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
+      setMenuState(!document.body.classList.contains("nav-open"));
     });
 
     nav.addEventListener("click", (event) => {

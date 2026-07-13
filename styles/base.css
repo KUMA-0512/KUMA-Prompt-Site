@@ -1,54 +1,73 @@
 :root {
   color-scheme: light;
-  --bg: #f8fbff;
-  --bg-soft: #edf5f7;
-  --bg-elevated: rgba(255, 255, 255, 0.78);
-  --text: #16202a;
-  --muted: #5c6875;
-  --line: rgba(56, 72, 87, 0.14);
-  --brand: #5a5cf0;
-  --brand-strong: #3538c9;
-  --brand-cyan: #00a9c8;
-  --accent: #1f9d7a;
-  --warning: #b36b00;
-  --shadow: 0 24px 60px rgba(29, 38, 64, 0.14);
+  --bg: #f5f8f9;
+  --bg-soft: #eaf0f2;
+  --bg-elevated: rgba(255, 255, 255, 0.88);
+  --surface: #ffffff;
+  --text: #10191f;
+  --muted: #59666e;
+  --line: rgba(35, 59, 72, 0.15);
+  --brand: #2e6f95;
+  --brand-strong: #174f70;
+  --brand-cyan: #3c9eb0;
+  --accent: #2f866f;
+  --button-start: #174f70;
+  --button-end: #267f90;
+  --button-text: #ffffff;
+  --warm: #c66d43;
+  --warning: #9b5c12;
+  --shadow: 0 24px 64px rgba(23, 50, 64, 0.16);
+  --shadow-soft: 0 14px 36px rgba(23, 50, 64, 0.1);
   --radius: 8px;
   --header-height: 72px;
-  --max-width: 1160px;
+  --max-width: 1200px;
+  --font-display: "Avenir Next", "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #10141d;
-    --bg-soft: #151c28;
-    --bg-elevated: rgba(23, 30, 43, 0.78);
-    --text: #edf4ff;
-    --muted: #a7b2c2;
-    --line: rgba(209, 223, 241, 0.16);
-    --brand: #9a9cff;
-    --brand-strong: #c2c4ff;
-    --brand-cyan: #55d9ef;
-    --accent: #55d1a8;
-    --warning: #ffc66b;
-    --shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+    --bg: #0b1013;
+    --bg-soft: #11191e;
+    --bg-elevated: rgba(20, 29, 34, 0.9);
+    --surface: #151e23;
+    --text: #f2f6f7;
+    --muted: #a7b3b9;
+    --line: rgba(205, 225, 234, 0.16);
+    --brand: #78bdd8;
+    --brand-strong: #9bd6ec;
+    --brand-cyan: #5fc6d4;
+    --accent: #67c3a4;
+    --button-start: #78bdd8;
+    --button-end: #67c3a4;
+    --button-text: #071115;
+    --warm: #e79a71;
+    --warning: #efb768;
+    --shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+    --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.28);
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #10141d;
-  --bg-soft: #151c28;
-  --bg-elevated: rgba(23, 30, 43, 0.78);
-  --text: #edf4ff;
-  --muted: #a7b2c2;
-  --line: rgba(209, 223, 241, 0.16);
-  --brand: #9a9cff;
-  --brand-strong: #c2c4ff;
-  --brand-cyan: #55d9ef;
-  --accent: #55d1a8;
-  --warning: #ffc66b;
-  --shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+  --bg: #0b1013;
+  --bg-soft: #11191e;
+  --bg-elevated: rgba(20, 29, 34, 0.9);
+  --surface: #151e23;
+  --text: #f2f6f7;
+  --muted: #a7b3b9;
+  --line: rgba(205, 225, 234, 0.16);
+  --brand: #78bdd8;
+  --brand-strong: #9bd6ec;
+  --brand-cyan: #5fc6d4;
+  --accent: #67c3a4;
+  --button-start: #78bdd8;
+  --button-end: #67c3a4;
+  --button-text: #071115;
+  --warm: #e79a71;
+  --warning: #efb768;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+  --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.28);
 }
 
 :root[data-theme="light"] {
@@ -61,14 +80,15 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
 }
 
 body {
   margin: 0;
   min-width: 320px;
   background:
-    linear-gradient(135deg, rgba(90, 92, 240, 0.08), transparent 28rem),
-    linear-gradient(225deg, rgba(0, 169, 200, 0.08), transparent 26rem),
+    linear-gradient(135deg, color-mix(in srgb, var(--brand) 7%, transparent), transparent 32rem),
+    linear-gradient(225deg, color-mix(in srgb, var(--accent) 6%, transparent), transparent 28rem),
     var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -91,6 +111,11 @@ a {
   text-decoration: none;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: color-mix(in srgb, var(--brand) 18%, transparent);
+}
+
 p,
 h1,
 h2,
@@ -106,16 +131,22 @@ h1,
 h2,
 h3 {
   color: var(--text);
+  font-family: var(--font-display);
   line-height: 1.16;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 h1 {
-  font-size: 5.8rem;
+  font-size: 5.35rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 2.65rem;
   margin-bottom: 1rem;
 }
 
@@ -153,4 +184,19 @@ button {
 
 .skip-link:focus {
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
